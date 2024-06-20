@@ -11,20 +11,24 @@
             padding: 0;
             box-sizing: border-box;
         }
-        .container{
-            display: flex;
-            /* justify-content: flex-start; */
-            align-items: center;
-        }
+
         .box1{
             width: 15%;
             color: black;
+            background-color: white;
             margin: 0px;
             border-right: 1px black solid;
-            /* position: fixed; */
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            bottom: 0px;
         }
-        .insta{
-            width: 100%;
+        .insta-text{
+            width: 190px;
+        }
+        .insta-logo{
+            width: 100px;
+            display: none;
         }
         .icons{
             font-size: 25px;
@@ -45,10 +49,13 @@
             padding: 12px;
         }
         .box2{
-        width: 85%;
-        display: flex;
-        flex-direction: column;
-        /* margin-left: 15%; */
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            margin-left: 18%;
+            font-size: 20px;
+            padding: 10px;
+            align-items: center;
         }
         .a{
             display: flex;
@@ -56,41 +63,70 @@
             width: 100%;
         }
         .a1{
-            width: 13%;
+            width: 10%;
             border-radius: 1000px;
             position: relative;
             margin-left: 180px;
         }
         .a1 img{
             border-radius: 1000px;
+            width: 150px;
+            height: 150px;
         }
         .a2{
-            background-color: antiquewhite;
+            /* background-color: antiquewhite; */
             width: 40%;
             margin-left: 100px;
+        }
+        .fl{
+            margin: 0px 0px 20px;
+        }
+        .fl button{
+            padding: 7px;
+            border-radius: 5px;
+        }
+        .info{
+            display: inline;
+            padding: 0px 10px;
+        }
+        .follow{
+            display: inline;
+            padding: 0px 10px;
+
+        }
+        .sl{
+            margin: 0px 0px 20px;
         }
         .b{
             display: flex;
             justify-content: center;
+            align-items: center;
+            justify-content: center;
             width: 100%;
         }
         .h{
-            background-color: forestgreen;
-            width: 6%;
-            height: 80px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .h img{
+            
+            width: 150px;
+            height: 150px;
             border-radius: 1000px;
             margin: 50px;
+            border: 1px white solid;
         }
         .c{
+            border-top: 1px solid black;
+            padding-top: 10px;
             display: flex;
             flex-direction: column;
-            background-color: red;
         }
         .c1{
             display: flex;
             justify-content: center;
             align-items: center;
-            color: white;
+            color: black;
         }
         .Posts{
             margin: -1px 60px 0px 0px;
@@ -98,53 +134,154 @@
         .Saved{
             margin: 0px 60px 0px 0px;
         }
-        @media{
+        .c2{
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: left;
+            justify-items: space-evenly;
+        }
 
+        .image{
+
+            flex-grow: 1;
+            width: 350px;
+            border: 2px solid black;
+        }
+        .image img{
+            /* height: 100px; */
+            width: 100%;
+            height: 357px;
+            margin: 1px;
+            align-content: left;
+        }
+        @media(max-width:1250px){
+            .i span:nth-child(2){
+                display: none;
+            }
+            .box1{
+                width: 10%;
+                min-width: 100px;
+            }
+            .insta-text{
+                display: none;
+            }
+            .insta-logo{
+                display: inline;
+            }
+            .i span:nth-child(1)
+            {
+                margin-left:43% ;
+            }
+            .box2{
+                width:90%
+            }
+        }
+        @media(max-width:768){
+            .a2{
+                width: 600px;
+            }
         }
     </style>
 
 </head>
 <body>
-    <div class="container">
-        <div class="box1">
-            <div class="insta">
-               <img src="intagram_text.png" alt="" width="200px">
-            </div>
-            <div class="icons">
-                <div class="i" id="home"><span><i class="fa-solid fa-house"></i></span>     Home</div>
-                <div class="i" id="search"><i class="fa-solid fa-magnifying-glass"></i>     Search</div>
-                <div class="i" id="explore"><i class="fa-regular fa-compass"></i>     Explore</div>
-                <div class="i" id="reels"><i class="fa-solid fa-video"></i>       Reels</div>
-                <div class="i" id="messages"><i class="fa-brands fa-facebook-messenger"></i>    Messages</div>
-                <div class="i" id="notification"><i class="fa-regular fa-heart"></i>      Notification</div>
-                <div class="i" id="create"><i class="fa-solid fa-plus"></i>       Create</div>
-                <div class="i" id="profile"><img src="Flag_of_India.png" alt=""  >       Profile</div>
-            </div>
-            <div class="more"><span><i class="fa-solid fa-bars"></i></span>     More</div>
+<!-- <div class="bbox1">
+</div> -->
+<div class="box1">
+    <div class="insta">
+    <img src="intagram_text.png" alt="" class="insta-text">
+    <img src="insta-logo.webp" alt="" class="insta-logo">
+    </div>
+    <div class="icons">
+        <div class="i" id="home">
+            <span><i class="fa-solid fa-house"></i></span>
+            <span>     Home</span>
         </div>
-        <div class="box2">
-            <div class="a">
-                <div class="a1"><img src="Flag_of_India.png" width="150px"></div>
-                <div class="a2"></div>
+        <div class="i" id="search">
+            <span><i class="fa-solid fa-magnifying-glass"></i></span>
+            <span>     Search</span>
+        </div>
+        <div class="i" id="explore">
+            <span><i class="fa-regular fa-compass"></i></span>
+            <span>      Explore</span>
             </div>
-            <div class="b">
-                <div class="h" ></div>
-                <div class="h"></div>
-                <div class="h"></div>
-                <div class="h" ></div>
-                <div class="h"></div>
-                <div class="h"></div>
-            </div>
-            <div class="c">
-                <div class="c1">
-                    <div class="Posts">Posts</div>
-                    <div class="Saved">Saved</div>
-                    <div class="Tagged">Tagged</div>
+        <div class="i" id="reels">
+            <span><i class="fa-solid fa-video"></i></span>
+            <span>        Reels</span>
+        </div>
+        <div class="i" id="messages">
+            <span><i class="fa-brands fa-facebook-messenger"></i></span>
+            <span>     Messages</span>
+        </div>
+        <div class="i" id="notification">
+            <span><i class="fa-regular fa-heart"></i></span>
+            <span>       Notification</span>
+        </div>
+        <div class="i" id="create">
+            <span><i class="fa-solid fa-plus"></i></span>
+            <span>        Create</span>
+        </div>
+        <div class="i" id="profile">
+            <span><img src="Flag_of_India.png" alt=""  ></span>
+            <span>        Profile</span>
+        </div>
+    </div>
+    <div class="more">
+        <span><i class="fa-solid fa-bars"></i></span>
+        <span>     More</span>
+    </div>
+</div>
+    <div class="box2">
+        <div class="a">
+            <div class="a1"><img src="Flag_of_India.png"></div>
+            <div class="a2">
+                <div class="fl">
+                    <span>  Vihan7301 </span>  
+                    <div class="info"><button>Edit profile</button></div> 
+                    <div class="info"> <button>View Archive</button></div>
+                    <div class="info"><i class="fa-solid fa-gear"></i></div>
                 </div>
-                <div class="c2"></div>
-                <div class="c3"></div>
+                <div class="sl">
+                    <div class="follow">6 Posts</div>
+                    <div class="follow">452 Followers</div>
+                    <div class="follow">438 Following</div>
+                </div>
+                <div class="tl">
+                    <div class="bio">This is my bio</div>
+                </div>
             </div>
+        </div>
+        <div class="b">
+            <div class="h" >
+                <img src="https://images.unsplash.com/photo-1718297991951-717874c94eeb?q=80&w=1820&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </div>
+            <div class="h" ><img src="https://images.unsplash.com/photo-1718297991951-717874c94eeb?q=80&w=1820&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+            <div class="h" ><img src="https://images.unsplash.com/photo-1718297991951-717874c94eeb?q=80&w=1820&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+            <div class="h" ><img src="https://images.unsplash.com/photo-1718297991951-717874c94eeb?q=80&w=1820&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+            <div class="h" ><img src="https://images.unsplash.com/photo-1718297991951-717874c94eeb?q=80&w=1820&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+            <div class="h" ><img src="https://images.unsplash.com/photo-1718297991951-717874c94eeb?q=80&w=1820&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+            
+            
+        </div>
+        
+        <div class="c">
+            <div class="c1">
+                <div class="Posts"><i class="fa-solid fa-table-cells"></i>    Posts</div>
+                <div class="Saved"><i class="fa-regular fa-bookmark"></i>   Saved</div>
+                <div class="Tagged"><i class="fa-regular fa-user"></i>      Tagged</div>
+            </div>
+            <div class="c2">
+                <div class="image"><img src="https://images.unsplash.com/photo-1718792679559-5cfd607bb564?q=80&w=1956&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+                <div class="image"><img src="https://images.unsplash.com/photo-1718653158025-11a5b61178d8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+                <div class="image"><img src="https://images.unsplash.com/photo-1718717722247-26f4c6c09192?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+                <div class="image"><img src="https://plus.unsplash.com/premium_photo-1718747537637-16c975f98b2c?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+                <div class="image"><img src="https://images.unsplash.com/photo-1718703358140-20d926a089e0?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+                <div class="image"><img src="https://images.unsplash.com/photo-1718743256270-a4b769236fd3?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""></div>
+            </div>
+            <div class="c3"></div>
         </div>
     </div>
 </body>
-</html>
+</html>    
