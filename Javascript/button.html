@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+</style>
+<body>
+    <button id="mybutton">button</button>
+    <div class="number">0</div>
+    <script>
+        let counter=0;
+        function addFunction(){
+            var mynumber=parseInt(number);
+            number+=1;
+            counter+=1;
+            console.log(counter);
+        }
+        // button = document.querySelector('mybutton');
+        addEventListener('click',addFunction);
+    </script>
+</body>
+</html>
