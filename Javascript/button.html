@@ -14,18 +14,18 @@
     }
 </style>
 <body>
-    <button id="mybutton">button</button>
-    <div class="number">0</div>
+    <button id="mybutton" >button</button>
+    <div id="number">0</div>
     <script>
         let counter=0;
         function addFunction(){
-            var mynumber=parseInt(number);
-            number+=1;
             counter+=1;
             console.log(counter);
+            countonhtml.textContent=counter;
         }
-        // button = document.querySelector('mybutton');
-        addEventListener('click',addFunction);
+        let button = document.querySelector('#mybutton');
+        let countonhtml = document.querySelector('#number');
+        button.addEventListener('click',addFunction);
     </script>
 </body>
 </html>

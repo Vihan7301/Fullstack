@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+        height: 100vh;
+    }
+</style>
+<body>
+    <input type="text" id="inputtext" value="0">
+    <button onclick="shownumber()" >button</button>
+    <div id="number"></div>
+
+
+
+
+
+
+
+
+    <script> 
+        let input = 0;
+        function shownumber(){
+            let inputtext1 = document.querySelector("#inputtext").value;
+            let display = document.querySelector("#number");
+            input+=parseInt(inputtext1);
+            display.textContent=input;
+        }  
+    </script>
+</body>
+</html>
