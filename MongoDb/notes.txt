@@ -1,0 +1,45 @@
+parent folder - database
+sub folder -collection
+file- document 
+each document has key value pair - Jason
+use <database> --- to make or use database 
+show dbs---
+empty database connot be created
+collection can be created
+show collections--to see collection
+db.createCollection('')--- to make collection
+
+Jason file is array[] of objects{}
+
+db.user.find()
+
+$all - and for same key expresion 
+$gt - greater than
+$lt - less than
+$gte -greater 
+$lte
+$ne - not exist/not equal
+$eq - equal
+$size -for array size
+$regex - regular expression
+$in -or for same key expresion
+$nin - not or expression for same key
+
+
+db.users.find().count() - to find no. of documents
+db.users.find(username:/name/)- to find any name or surname
+db.users.find(username:/*first letter/) - to find letter start
+db.users.find($or[{firstName:"Aryan"},{lastName:"Gupta"}]) - or expression for diff. key
+db.users.find({firstName:{$in:["Aryan","Sakshi","Vishal"]}}) - or expression for same key
+
+if diff key then diffult is and
+if same key then diffult is or
+
+db.users.find({skills:"Java",skills:{$ne:"Python"}})-- for not take python
+
+
+
+
+
+
+
