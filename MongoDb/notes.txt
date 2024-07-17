@@ -32,10 +32,39 @@ db.users.find(username:/*first letter/) - to find letter start
 db.users.find($or[{firstName:"Aryan"},{lastName:"Gupta"}]) - or expression for diff. key
 db.users.find({firstName:{$in:["Aryan","Sakshi","Vishal"]}}) - or expression for same key
 
-if diff key then diffult is and
-if same key then diffult is or
+if diff key then diffault is and
+if same key then diffoult is or
 
 db.users.find({skills:"Java",skills:{$ne:"Python"}})-- for not take python
+
+
+mangoDb make shards
+And it is multiple shards
+Shards are to find diff id's(to divide diff groups)
+db.users.aggrigate[]
+
+The functions are :-
+ $match -- it work same as find
+ $group -- 
+ $project --
+ &count -- we use it to count of 
+ 
+If we have to find the count in group then we use sum 
+And in match we use count
+
+We cant make group of an array (skills) 
+$unwind is used to break the arrays 
+ 
+
+
+
+
+
+
+
+
+
+
 
 
 

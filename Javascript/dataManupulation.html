@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h">This is data manupulation</h1>
+    
+    <button id="red">Red</button>
+    <button id="green">Green</button>
+    <button id="brown">Brown</button>
+    <button id="upper">Upper Case</button>
+    <button id="lower">Lower Case</button>
+    <button id="increase">+</button>
+    <button id="decrease">-</button>
+
+    <script>
+        document.getElementById("red").onclick=function(){
+            document.getElementById("h").style.color="Red"
+        }
+        document.getElementById("green").onclick=function(){
+            document.getElementById("h").style.color="green"
+        }
+        document.getElementById("brown").onclick=function(){
+            document.getElementById("h").style.color="Brown"
+        }
+        document.getElementById("upper").onclick=function(){
+            document.getElementById("h").style.textTransform="UpperCase"
+        }
+        document.getElementById("lower").onclick=function(){
+            document.getElementById("h").style.textTransform="LowerCase"
+        }
+        let count=34
+        document.getElementById("increase").onclick=function(){
+            ++count;
+            document.getElementById("h").style.fontSize=count+"px"
+        }
+        document.getElementById("decrease").onclick=function(){
+            --count;
+            document.getElementById("h").style.fontSize=count+"px"
+        }
+    </script>
+</body>
+</html>
