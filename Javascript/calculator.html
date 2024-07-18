@@ -14,13 +14,17 @@
             flex-direction: column;
             align-items: center;
         }
+        .cal{
+            font-size: 65px;
+        }
         .calculator{
             background-color: black;
             width: 500px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 100px;
+            margin-top: 50px;
+            border-radius: 20px;
         }
         .display{
             width: 90%;
@@ -42,6 +46,7 @@
             justify-content: center;
             margin-top: 50px;
             margin-bottom: 50px;
+            
         }
         .keys button{
             width: 20%;
@@ -50,19 +55,20 @@
             border: 2px;
             border-radius: 10px;
             font-size: 20px;
+            
         }
     </style>
 </head>
 <body>
-    <h1>Calculator</h1>
+    <div class="cal">Calculator</div>
     <div class="calculator">
         <div class="display">
-            <input type="number" id="input" disabled>
+            <input type="text" id="input" disabled>
         </div>
         <div class="keys">
-            <button id="one">1</button>
-            <button id="two">2</button>
-            <button id="three">3</button>
+            <button >1</button>
+            <button >2</button>
+            <button>3</button>
             <button id="add">+</button>
             <button id="four">4</button>
             <button id="five">5</button>
@@ -80,27 +86,28 @@
             <button id="wholeremove">CLR</button>
         </div>
     </div>
-
-
-
-
-
-
-
     <script>
-        let a =document.querySelectorAll("button")
-        let b = document.querySelector("input")
-        for(i of a)
+        let a =document.querySelectorAll("button");
+        let b = document.querySelector("input");
+        for( let i of a)
         {
-            i.onclick= function(){
-                if (i.inner == '='){
-                    
+            i.onclick= function()
+            {
+                if (i.innerText == "="){
+                    let val = b.value
+                    b.value = eval(val)
                 }
-                else {
-                    document.querySelector("input").value+=i.innertext
+                else if(i.innerText == "CLR"){
+                    b.value=" "
+                }
+                else if(i.innerText == "DEL"){
+                    b.value=b.value.slice(0,-1)
+                }
+                else
+                {
+                    b.value +=i.innerText   
+                }
             }
-        }
-
         }
     </script>
 </body>
