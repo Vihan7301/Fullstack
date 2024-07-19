@@ -13,7 +13,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
-
+        flex-direction: column;
+       }
+       .Heading{
+        font-size: 100px;
        }
        .watch{
         background-color: black;
@@ -25,26 +28,104 @@
         flex-direction: column;
         border-radius: 500px;
        }
-       .watch input{
-        width: 200px;
-        height: 50px;
+       .input{
+        color: white;
+        font-size: 30px;
        }
        .buttons{
         margin-top: 50px;
        }
+       .buttons button{
+        padding: 20px;
+        font-size: 30px;
+       }
     </style>
 </head>
 <body>
+    <div class="Heading">Stopwatch</div>
     <div class="watch">
-        <input type="text" disabled>
+        <div class="input">
+            <span id="hour">00</span>
+            <span>:</span>
+            <span id="min">00</span>
+            <span>:</span>
+            <span id="sec">00</span>
+            <span>:</span>
+            <span id="millisec">00</span>
+        </div>
         <div class="buttons">
-            <button>start</button>
-            <button>stop</button>
-            <button>reset</button>
+            <button id="start">start</button>
+            <button id="stop">stop</button>
+            <button id="reset">reset</button>
         </div>
     </div>
     <script>
+        
+        document.getElementById("start").onclick =function(){
+            let h = document.getElementById("hour")
+            let m = document.getElementById("min")
+            let s = document.getElementById("sec")
+            let ms = document.getElementById("millisec")
+            
+            let mls = Number(ms.innerText)
+            let sec = Number(s.innerText)
+            let min = Number(m.innerText)
+            let hour = Number(h.innerText)
+            
+            let a = setInterval(()=>{
+                mls++
+                
+                if (mls<10)
+                {
+                    mls="0" + mls
+                }
+                ms.innerText  =mls 
+                if(mls == 60){
+                    sec++
+                    mls =0
+                    if (sec<10)
+                    {
+                        sec="0" + sec
+                    }
+                    s.innerText =sec
+                }
+                if (sec == 60){
+                    min ++
+                    sec =0
+                    if (min<10)
+                    {
+                        min="0" + min
+                    }
+                    m.innerText =min
+                }
+                if (min == 60)
+                {
+                    hour++
+                    min=0
+                    if (hour<10)
+                    {
+                        hour="0" + hour
+                    }
+                    h.innerText = hour
+                }
+                document.getElementById("stop").onclick=function(){
+                    clearInterval(a)
+                }
+                document.getElementById("reset").onclick=function(){
+                    mls= 0
+                    sec= 0
+                    min= 0
+                    hour= 0
 
+                    ms.innerText = "00"
+                    s.innerText = "00"
+                    m.innerText = "00"
+                    h.innerText = "00"
+                    clearInterval(a)
+                }
+            },10) 
+        }
+        
     </script>
 </body>
 </html>
