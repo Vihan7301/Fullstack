@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>RGB Lights</title>
 </head>
 
 <body>
     <input type="text" id="inp" disabled>
-    <button id="btn">Submit</button>
-    <button id="gen">Generate</button>
+    <!-- <button id="btn">Submit</button>
+    <button id="gen">Generate</button> -->
 
     <script>
         // document.getElementById("gen").onclick = function () {
@@ -32,11 +32,11 @@
         // setInteravl - it takes two inputs first the arroy func and second the millisec
         // setInterval(()=>{   code},milisec)
 
-        // setInterval(()=>{
-        //     let val = Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255)
-        //     document.getElementById("inp").value = val
-        //     document.body.style.backgroundColor = `rgb(${val})`
-        // },500)
+        setInterval(()=>{
+            let val = Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255)
+            document.getElementById("inp").value = val
+            document.body.style.backgroundColor = `rgb(${val})`
+        },300)
 
 
 
