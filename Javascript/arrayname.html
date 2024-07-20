@@ -12,7 +12,8 @@
     <div id="print"></div>
 
     <script>
-        let a=[]
+        let a=[];
+        
         document.getElementById("array").onclick=()=>{
             let val=document.querySelector("input").value
             document.querySelector("input").value=''
@@ -20,17 +21,19 @@
             a.push(val)
             console.log(val)
         }
+
         document.getElementById("printbutton").onclick=()=>{
-            for (let i; i<a ; i++ ) 
-            {
-                console.log("Helleo")
-                console.log(a[i])
-                
+            for (let x in a){
+                let s = setTimeout(()=>
+                {
+                    let p=""
+                    p +=a[x]
+                    console.log(p)
+                },3000)
             }
-            // console.log(a)
-            // let b =setInterval(()=>{
-            // },1000)
+            
         }
+        
 
     </script>
 </body>
