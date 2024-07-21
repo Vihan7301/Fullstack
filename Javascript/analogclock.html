@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analog Clock</title>
+</head>
+<style>
+
+</style>
+<body>
+    <div class="ana">
+        <span id="hr">00</span>
+        <span>:</span>
+        <span id="min">00</span>
+        <span>:</span>
+        <span id="sec">00</span>
+    </div>
+    <script>
+        let a = new Date()
+        setInterval(()=>{
+            document.getElementById("hr").innerText=a.getHours()
+            document.getElementById("min").innerText=a.getMinutes()
+            document.getElementById("sec").innerText=a.getSeconds()
+
+        },1000)
+    </script>
+</body>
+</html>
