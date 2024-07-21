@@ -10,11 +10,11 @@
 </style>
 <body>
     <div class="ana">
-        <span id="hr">00</span>
+        <span id="hr"></span>
         <span>:</span>
-        <span id="min">00</span>
+        <span id="min"></span>
         <span>:</span>
-        <span id="sec">00</span>
+        <span id="sec"></span>
     </div>
     <script>
         let a = new Date()
@@ -22,7 +22,6 @@
             document.getElementById("hr").innerText=a.getHours()
             document.getElementById("min").innerText=a.getMinutes()
             document.getElementById("sec").innerText=a.getSeconds()
-
         },1000)
     </script>
 </body>

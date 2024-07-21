@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>change</title>
     <style>
         input{
             width: 200px;
@@ -12,17 +12,21 @@
     </style>
 </head>
 <body>
+    <h1>this is to change </h1>
     <input type="range" id="range">
     <input type="color" id="color">
     <button id="ready">ready</button>
     <script>
-        
-        
-        
         document.getElementById("ready").onclick()=function(){
             console.log("hello")
-            console.log(document.getElementById("color").value)
+            console.log(documnet.getElementById("range").value)
         }
+        
+        
+        // document.getElementById("ready").onclick()=function(){
+        //     console.log("hello")
+        //     console.log(document.getElementById("color").value)
+        // }
     </script>
 </body>
 </html>
