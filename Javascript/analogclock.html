@@ -6,19 +6,38 @@
     <title>Analog Clock</title>
 </head>
 <style>
-
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .ana{
+        background-color: black;
+        color: white;
+        width: 500px;
+        height: 500px;
+        border-radius: 500px;
+        font-size: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 </style>
 <body>
     <div class="ana">
-        <span id="hr"></span>
+        <span id="hr">00</span>
         <span>:</span>
-        <span id="min"></span>
+        <span id="min">00</span>
         <span>:</span>
-        <span id="sec"></span>
+        <span id="sec">00</span>
     </div>
     <script>
-        let a = new Date()
         setInterval(()=>{
+            let a = new Date()
             document.getElementById("hr").innerText=a.getHours()
             document.getElementById("min").innerText=a.getMinutes()
             document.getElementById("sec").innerText=a.getSeconds()

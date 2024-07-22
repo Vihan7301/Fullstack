@@ -9,6 +9,10 @@
             width: 200px;
             height: 200px;
         }
+        #color{
+            padding: 10px;
+            background-color: white;
+        }
     </style>
 </head>
 <body>
@@ -16,13 +20,10 @@
     <input type="range" id="range">
     <input type="color" id="color">
     <script>
-        document.getElementById("color").onclick = function(){
+        setInterval(()=>{
                 document.body.style.backgroundColor= document.getElementById("color").value
-            }
-            document.getElementById("range").onclick = function(){
-            let b = document.getElementById("range").value;
-            document.getElementById("head").style.fontSize = b + "px";
-        }
+                document.getElementById("head").style.fontSize = document.getElementById("range").value + "px";
+            },10)
     </script>
 </body>
 </html>
