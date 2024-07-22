@@ -20,10 +20,14 @@
     <input type="range" id="range">
     <input type="color" id="color" >
     <script>
-        setInterval(()=>{
-                document.body.style.backgroundColor= document.getElementById("color").value
-                document.getElementById("head").style.fontSize = document.getElementById("range").value + "px";
-            },10)
+        // setInterval(()=>{
+        //         document.body.style.backgroundColor= document.getElementById("color").value
+        //         document.getElementById("head").style.fontSize = document.getElementById("range").value + "px";
+        //     },10)
+        document.getElementById("color").oninput= function(){
+            let val = document.getElementById("color").value
+            document.body.style.backgroundColor= val
+        }
     </script>
 </body>
 </html>

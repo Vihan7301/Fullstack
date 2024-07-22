@@ -11,16 +11,35 @@
     <button id="print">Print</button>
     
     <script>
-        let arr = []
-        document.querySelector("#submit").onclick=function(){
-            let val = document.querySelector("input").value
-            document.querySelector("input").value=''
-            document.querySelector("input").focus()
-            arr.push(val)
-        }
-        document.querySelector("#print").onclick=function(){
-            console.log(arr)
-        }
+
+        // push -- it push to last indexing
+        // pop -- it takes from lest indexing
+        //unshift - it push to first indexing
+        //shift -- it pop from last indexing
+        //slice -- it takes two argumnet ( , )-- it gives us the sliced value (first_value, last_value), last value is excluded 
+        //splice -- it takes three argument  -- it delete the values given position from first and second and put the thrid the argument -- it is not indexing
+
+
+
+        // let arr = []
+        // document.querySelector("#submit").onclick=function(){
+        //     let val = document.querySelector("input").value
+        //     document.querySelector("input").value=''
+        //     document.querySelector("input").focus()
+        //     arr.push(val)
+        // }
+        // document.querySelector("#print").onclick=function(){
+        //     console.log(arr)
+        // }
+
+
+
+        let a=[100,200,300,400,500,600,700,800,900,10000]
+        a.splice(0,3,)
+        console.log(a)
+
+
+
     </script>
 </body>
 </html>
