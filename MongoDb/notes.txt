@@ -53,9 +53,25 @@ If we have to find the count in group then we use sum
 And in match we use count
 
 We cant make group of an array (skills) 
-$unwind is used to break the arrays 
- 
+$unwind -- is used to break the arrays 
 
+
+
+$$ROOT-- it gives the whaole key  
+$addToSet -- it save the key in aaray but not duplicate
+$push-- it save the key in aaray but duplicate and it is in group, it also take one or more key it 
+ 
+$group: {
+      _id:"$city",
+      users:{$push:{
+        name:"$username",
+        salary:"$salary"
+      }}
+    }
+
+
+$addFields -- it make another key in object, it is like function it add another key in it 
+$sort -- it sorted ass.(+1) Or diss(-1)
 
 
 

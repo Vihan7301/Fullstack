@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Print name</title>
+    <style>
+    #print{
+        font-size: 100px;
+    }
+    </style>
 </head>
 <body>
     <input type="text" >
@@ -13,27 +18,32 @@
 
     <script>
         let a=[];
-        
+        let p =document.getElementById("print")
+        let i = document.querySelector("input")
+
         document.getElementById("array").onclick=()=>{
-            let val=document.querySelector("input").value
-            document.querySelector("input").value=''
-            document.querySelector("input").focus()
+            let val=i.value
+            i.value=''
+            i.focus()
             a.push(val)
             console.log(val)
         }
-
         document.getElementById("printbutton").onclick=()=>{
-            for (let x in a){
-                let s = setTimeout(()=>
-                {
-                    let p=""
-                    p +=a[x]
-                    console.log(p)
-                },1000)
-            }
+            let count =0
+            let s = setInterval(()=>
+            {
+                if(count== a.length -1){
+                    p.innerText += " " +a[count]
+                }
+                else if (count == a.length){
+                    clearInterval(s)
+                }
+                else{
+                    p.innerText += " " +a[count] + ", "
+                }
+                count++
+            },1000)
         }
-        
-
     </script>
 </body>
 </html>
