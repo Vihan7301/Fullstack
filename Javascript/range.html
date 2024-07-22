@@ -17,10 +17,11 @@
     <input type="color" id="color">
     <button id="ready">ready</button>
     <script>
-        document.getElementById("ready").onclick()=function(){
-            console.log("hello")
-            console.log(documnet.getElementById("range").value)
-        }
+        document.getElementById("color").onclick = function(){
+                let a = document.getElementById("color").value;
+                console.log(a)
+                document.body.style.backgroundColor= a
+            }
         
         
         // document.getElementById("ready").onclick()=function(){
