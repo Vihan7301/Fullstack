@@ -9,28 +9,56 @@
         *{
             padding: 0;
             margin: 0;
+            
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .bigBox{
-            
+            margin-top: 50px;
+            padding: 20px;
+            width: 70%;
+        }
+        .boxess{
+            padding: 30px;
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .box{
+            height: 100px;
+            width: 20%;
+            margin: 15px;
+            border: solid 2px black;
         }
     </style>
 </head>
 <body>
     <div class="bigBox">
         <input type="text" placeholder="Enter Your Color Name" id="color">
-        <input type="number" placeholder="Select Your div">
+        <input type="number" placeholder="Select Your div" id="number">
         <button id="submit">Submit</button>
-        <div id="box1"></div>
-        <div id="box2"></div>
-        <div id="box3"></div>
-        <div id="box4"></div>
-        <div id="box5"></div>
-        <div id="box6"></div>
-        <div id="box7"></div>
-        <div id="box8"></div>
+        <div class="boxess">
+            <div class="box" id="box1"></div>
+            <div class="box" id="box2"></div>
+            <div class="box" id="box3"></div>
+            <div class="box" id="box4"></div>
+            <div class="box" id="box5"></div>
+            <div class="box" id="box6"></div>
+            <div class="box" id="box7"></div>
+            <div class="box" id="box8"></div>
+        </div>
     </div>
     <script>
-
+        document.getElementById("submit").onclick = function(){
+            let c = document.getElementById("color").value 
+            let d = document.getElementById("number").value
+            
+        }
     </script>
 </body>
 </html>
