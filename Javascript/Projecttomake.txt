@@ -1,6 +1,6 @@
-Calculator
-stop-watch
-digital clock
+Calculator -- done
+stop-watch -- done
+digital clock -- done
 slider
 music application
 whether app.
