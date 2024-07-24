@@ -57,9 +57,9 @@ $unwind -- is used to break the arrays
 
 
 
+$push-- it save the key in array but duplicate and it is in group, it also take one or more key it 
 $$ROOT-- it gives the whaole key  
 $addToSet -- it save the key in aaray but not duplicate
-$push-- it save the key in aaray but duplicate and it is in group, it also take one or more key it 
  
 $group: {
       _id:"$city",

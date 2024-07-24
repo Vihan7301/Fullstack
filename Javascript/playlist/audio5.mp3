@@ -1,0 +1,7 @@
+<br />
+<b>Warning</b>:  mysqli_connect(): (HY000/1045): Access denied for user 'pglnew'@'ns31460702.ip-141-94-135.eu' (using password: YES) in <b>/home/admin/web/pagalnew.com/public_html/connectdbalter.php</b> on line <b>7</b><br />
+<br />
+<b>Fatal error</b>:  Uncaught Error: Call to a member function query() on bool in /home/admin/web/pagalnew.com/public_html/download128k.php:142
+Stack trace:
+#0 {main}
+  thrown in <b>/home/admin/web/pagalnew.com/public_html/download128k.php</b> on line <b>142</b><br />

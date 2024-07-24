@@ -30,21 +30,19 @@
     <div class="box">
         <audio  src="" controls></audio>
         <br><br>
-        <button>audio4</button>
-        <button>audio3</button>
-        <button>audio2</button>
+        <button id="1">audio1</button>
+        <button id="2">audio2</button>
+        <button id="3">audio3</button>
     </div>
     <script>
-        let a = document.querySelectorAll("button")
         let b= document.querySelector("audio")
 
-        for (i of a){
-            i.onclick = function(){
-                b.src = i.innerText + ".mp3"
-                console.log(i.innerText)
-                console.log(b)
-                b.onplay()
-            }
+        function PlayMusic(id){
+            b.src= `audio${id}.mp3`
+            b.play()
+        }
+        document.querySelectorAll("button").onclick = function(){
+            console.log("hello")
         }
 
 
