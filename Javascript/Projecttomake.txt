@@ -3,6 +3,6 @@ stop-watch -- done
 digital clock -- done
 slider
 music application
-whether app.
+whether application
 to -do list
-add to cart
+add to carts

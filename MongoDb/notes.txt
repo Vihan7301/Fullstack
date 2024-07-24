@@ -72,7 +72,7 @@ $group: {
 
 $addFields -- it make another key in object, it is like function it add another key in it 
 $sort -- it sorted ass.(+1) Or diss(-1)
-
+$limit -- it limits the keys in object -- 5 if we have to save only first 5 keys
 
 
 
