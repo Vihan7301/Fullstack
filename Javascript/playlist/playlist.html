@@ -13,7 +13,6 @@
         .box{
             border: 1px black;
             width: 50%;
-            
             background-color: black;
             display: flex;
             flex-direction: column;
@@ -33,20 +32,40 @@
         <button id="1">audio1</button>
         <button id="2">audio2</button>
         <button id="3">audio3</button>
+        <div class="ineer">
+            <button id="pre">Previos</button>
+            <button id="next">Next</button>
+        </div>
     </div>
     <script>
+        let a = document.querySelectorAll("button")
         let b= document.querySelector("audio")
 
         function PlayMusic(id){
             b.src= `audio${id}.mp3`
+            b.id= id
             b.play()
         }
-        document.querySelectorAll("button").onclick = function(){
-            console.log("hello")
+        var id=0
+        for( let i of a){
+            i.onclick = function(){
+                if(i.id == "pre"){
+                    let get_id  =Number(b.id)
+                    PlayMusic(--get_id )
+                }
+                else if (i.id == "next"){
+                    let get_id  =Number(b.id)
+                    PlayMusic(++get_id )
+                }
+                else{
+                    var id = i.id
+                    PlayMusic(id)
+                }
+            }
         }
 
-
         
+
     </script>
 </body>
 </html>
