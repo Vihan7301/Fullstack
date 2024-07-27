@@ -7,31 +7,44 @@
 </head>
 <body>
     <input type="text">
-    <button>Submit</button>
+    <button id="submit">Submit</button>
     <script>
         let inp = document.querySelector("input")
-        let btn = document.querySelector("button")
-        let a = 0
-        document.querySelector("button").onclick =function(){
+        let main = document.getElementById("submit")
+       
+        let head = document.querySelectorAll("h1")
+        let count = 0
+        let btn;
+        
+        main.onclick =function(){
             let heading = document.createElement("h1")
             let done = document.createElement("button")
             let delete_btn = document.createElement("button")
 
             done.innerText = "Complete"
             delete_btn.innerText = "Delete"
-            a++
-            heading.id = a
-            done.id = a
-            delete_btn.id = a
-            
-
+            count++
+            heading.className = count
+            done.className = count
+            delete_btn.className = count
             heading.innerHTML=inp.value
+
             document.body.append(heading)
             document.body.append(done)
             document.body.append(delete_btn)
+
+            let btn = document.querySelectorAll("button")
+            for (i of btn)
+             {
+                console.log(i)
+                i.onclick = function(){
+                    console.log(i)
+                }
+            }
         }
 
         
+    
     </script>
 </body>
 </html>

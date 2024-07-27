@@ -1,0 +1,24 @@
+http method 
+1. get : any info. that is served by the server
+2. post : any info. taken from the frounend by the server
+3. put : any info. update by the server to the frounend
+4. delete : any info. deleted by the server to the frounend
+5. patch : specific info. update by the server to the frounend
+
+kisi bhi info. ko cerate karna ==> POST
+info. ko update karna ==> PUT PATCH
+delete karna ==> delete
+aur read karna ==>get 
+
+it is in brouser perspective
+
+
+
+
+offline is : \   C:\ first slach is root
+online is :/     localhost:8000/
+online           www.google.com
+
+
+
+
