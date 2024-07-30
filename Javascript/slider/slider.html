@@ -4,18 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         img{
             height: 100vh;
-            width: 100%;
+            width: 99%;
+        }
+        #image1{
+            z-index: 2;
+            position: absolute;
+        }
+        #image2{
+            z-index: 3;
+            position: absolute;
+        }
+        #image3{
+            z-index: 4;
+            position: absolute;
+        }
+        #image4{
+            z-index: 5;
+            position: absolute;
+        }
+        #left{
+            z-index: 10;
+            position: absolute;
+            top: 50%;
+            left: 0px;
+        }
+        #right{
+            z-index: 10;
+            position: absolute;
+            top: 50%;
+            right: 0px;
         }
     </style>
 </head>
 <body>
-    <img src="beautiful-view-greenery-bridge-forest-perfect-background_181624-17827.jpg.avif" alt="" width="0-100%">
-    <img src="modern-gold-background-free-vector.jpg" alt="">
-    <img src="premium_photo-1673306778968-5aab577a7365.jpeg" alt="">
-    <img src="tropical-leaves-background-design-summer-leaves-flat-illustration-simple-banner-with-copy-space-free-vector.jpg" alt="">
+    <img src="beautiful-view-greenery-bridge-forest-perfect-background_181624-17827.jpg.avif" alt="" id="image1">
+    <img src="modern-gold-background-free-vector.jpg" alt="" id="image2">
+    <img src="premium_photo-1673306778968-5aab577a7365.jpeg" alt="" id="image3">
+    <img src="tropical-leaves-background-design-summer-leaves-flat-illustration-simple-banner-with-copy-space-free-vector.jpg" alt="" id="image4">
+    <center><button id="left"><i class="fa-solid fa-arrow-left"></i></button>
+    <button id="right"><i class="fa-solid fa-arrow-right"></i></button></center>
     <script>
         
     </script>
