@@ -11,6 +11,8 @@ const express = require ('express');
 const colors = require('colors');
 const dotenv = require('dotenv').config();
 
+const userdata = require ('./utility/userdata.json')
+
 const PORT = 3000;
 // port is palatform where the server is launch
 // it can be any 4 digit no.
@@ -21,8 +23,11 @@ const app = express();
 app.use(express.json());
 // use take 1 parameter
 
+
+
+// "/" is  
 app.get("/", (req, res) => {
-    res.send("API is running");
+    res.send(userdata);
   });
   
   app.listen(PORT, () =>{
