@@ -47,7 +47,7 @@ app.get("/contact", (req, res) => {
 });
   
 app.listen(PORT, () =>{
-  console.log(`Server is running on port ${PORT}`.bgBlue.black)
+  console.log(`Server is running on port ${PORT}`.yellow)
 });
 
 
