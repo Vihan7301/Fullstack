@@ -9,6 +9,7 @@
             padding: 10px;
         }
         #submit{
+            background-color: red;
             
         }
     </style>
@@ -19,17 +20,20 @@
         <br><br>
         <input type="text" id="age" placeholder="Enter Your Age">
         <br><br>
-        <input type="number" id="password" placeholder="Enter Your Phone No.">
+        <input type="number" id="phone" placeholder="Enter Your Phone No.">
         <br><br>
         <input type="email" id="useremail" placeholder="Enter Your email">
         <br><br>
-        <input type="radio" value="Male">Male
-        <input type="radio" value="Female">Female 
-        <input type="radio" value="none">none 
+        <input type="radio" name="Gender" value="Male" id="male">
+        <label for="male">Male</label>
+        <input type="radio" name="Gender" value="Female" id="female">
+        <label for="female">Female</label>
+        <input type="radio" name="Gender" value="none" id="none">
+        <label for="none">None</label>
         <br><br>
-        <select name="" id="">
-            <option >Select Your Hometown</option>
-            <option value="">Jaipur</option>
+        <select name="" id="location">
+            <option>Select Your Hometown</option>
+            <option value="jaipur">Jaipur</option>
             <option value="Jodhpur">Jodhpur</option>
             <option value="Ajmer">Ajmer</option>
             <option value="Kota">Kota</option>
@@ -39,11 +43,27 @@
         <br><br>
         <input type="button" value="Submit" id="submit">
     </form>
+
     <script> 
 
-    let arr = []
-    let obj = {
-        name : document.querySelector("#username").value
+    document.querySelector("#submit").onclick= function(){
+        let obj = {
+            name : document.querySelector("#username").value,
+            age : document.querySelector("#age").value,
+            number : document.querySelector("#phone").value,
+            email : document.querySelector("#useremail").value,
+            gender : document.querySelector("Gender").value,
+            
+            location : document.querySelector("#location").value,
+
+        }
+        console.log(obj)
+        // let obj1= document.querySelectorAll("input")
+        // console.log(obj1)
+        // for(i of obj1)
+        // {
+        //     console.log(i)
+        // }
     }
     </script>
 </body>
