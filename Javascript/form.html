@@ -4,28 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        input{
+            padding: 10px;
+        }
+        #submit{
+            
+        }
+    </style>
 </head>
 <body>
-    <form action="" method="post">
-        <input type="text" name=""  id="username" placeholder="Enter Your Name">
+    <form method="post">
+        <input type="text" id="username" placeholder="Enter Your Name">
         <br><br>
-        <input type="text" name=""  id="age" placeholder="Enter Your Age">
+        <input type="text" id="age" placeholder="Enter Your Age">
         <br><br>
-        <input type="number" name="" id="password" placeholder="Enter Your Phone No.">
+        <input type="number" id="password" placeholder="Enter Your Phone No.">
         <br><br>
-        <input type="email" name="" id="useremail">
+        <input type="email" id="useremail" placeholder="Enter Your email">
         <br><br>
-        <input type="radio" name="Gender">Male
-        <input type="radio" name="Gender">Female 
+        <input type="radio" value="Male">Male
+        <input type="radio" value="Female">Female 
+        <input type="radio" value="none">none 
         <br><br>
         <select name="" id="">
-            <option value="Ahmedabad">Ahmedabad</option>
-            <option value="Surat">Surat</option>
+            <option >Select Your Hometown</option>
+            <option value="">Jaipur</option>
+            <option value="Jodhpur">Jodhpur</option>
+            <option value="Ajmer">Ajmer</option>
+            <option value="Kota">Kota</option>
+            <option value="Pilani">Pilani</option>
+            <option value="Nagpur">Nagpur</option>
         </select>
         <br><br>
-        </form>
-    <script>
+        <input type="button" value="Submit" id="submit">
+    </form>
+    <script> 
 
+    let arr = []
+    let obj = {
+        name : document.querySelector("#username").value
+    }
     </script>
 </body>
 </html>
