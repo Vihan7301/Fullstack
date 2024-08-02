@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Form</title>
     <style>
         input{
             padding: 10px;
@@ -11,23 +11,32 @@
         #submit{
             background-color: red;
         }
+        table{
+            margin-top: 50px;
+        }
+        th{
+            padding: 10px;
+        }
+        table, th, td {
+            border:1px solid black;
+        }
     </style>
 </head>
 <body>
     <form method="post">
         <input type="text" id="username" placeholder="Enter Your Name">
         <br><br>
-        <input type="text" id="age" placeholder="Enter Your Age">
+        <input type="number" id="age" placeholder="Enter Your Age">
         <br><br>
         <input type="number" id="phone" placeholder="Enter Your Phone No.">
         <br><br>
         <input type="email" id="useremail" placeholder="Enter Your email">
         <br><br>
-        <input type="radio" name="Gender" value="Male" id="male">
+        <input type="radio" value="Male" class="gender" id="male">
         <label for="male">Male</label>
-        <input type="radio" name="Gender" value="Female" id="female">
+        <input type="radio" value="Female" class="gender" id="female">
         <label for="female">Female</label>
-        <input type="radio" name="Gender" value="none" id="none">
+        <input type="radio" value="none" class="gender" id="none">
         <label for="none">None</label>
         <br><br>
         <select name="" id="location">
@@ -42,8 +51,29 @@
         <br><br>
         <input type="button" value="Submit" id="submit">
     </form>
-
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Number</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>City</th>
+            <th>Edit</th>
+        </tr>
+    </table>
     <script> 
+
+    let a= ()=>{
+        console.log("hello")
+            let a = document.querySelectorAll(".class")
+            for(let i of a){
+                if(a.checked == true){
+                    console.log("hello")
+                    return a;
+                }
+            }
+        }
 
     document.querySelector("#submit").onclick= function(){
         let obj = {
@@ -51,8 +81,7 @@
             age : document.querySelector("#age").value,
             number : document.querySelector("#phone").value,
             email : document.querySelector("#useremail").value,
-            gender : document.querySelector("Gender").value,
-            
+            gender :a(),
             location : document.querySelector("#location").value,
 
         }
