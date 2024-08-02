@@ -17,6 +17,7 @@
         let btn;
         
         main.onclick =function(){
+            
             let heading = document.createElement("h1")
             let done = document.createElement("button")
             let delete_btn = document.createElement("button")
@@ -33,14 +34,21 @@
             document.body.append(heading)
             document.body.append(done)
             document.body.append(delete_btn)
+            
+            inp.value=''
+            inp.focus()
 
-            let btn = document.querySelectorAll("button")
-            for (i of btn)
-             {
-                console.log(i)
-                // i.onclick = function(){
-                //     console.log(i)
-                // }
+            done.onclick = function(event){
+                let a =  document.getElementsByClassName(event.target.className);
+                a[0].style.textDecoration = 'line-through'
+            }
+
+            delete_btn.onclick = function(event){
+                let a =  document.getElementsByClassName(event.target.className);
+                for(let c of a){
+                    c.remove()
+                }
+                a[0].remove()
             }
         }
 

@@ -15,6 +15,7 @@
             padding: 20px;
             margin: auto;
             width: 60%;
+            background-color: white;
         }
         .color{
             border-radius: 30px;
@@ -37,13 +38,13 @@
         .diff{
             padding: 10px;
             height: 50px;
-            
+
         }
     </style>
 </head>
 <body>
     <div class="countainer">
-        <select name="" id="">
+        <select name="" >
             <option>Make a Choice</option>
             <option>React</option>
             <option>Django</option>
@@ -63,7 +64,13 @@
     </div>
 
     <script>
-
+        let color = document.querySelectorAll(".color")
+        for(let i of color){
+            console.log(i.id)
+            i.onclick=function(){
+                document.body.style.backgroundColor = i.id
+            }
+        }
     </script>
 </body>
 </html>
