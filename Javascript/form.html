@@ -32,11 +32,11 @@
         <br><br>
         <input type="email" id="useremail" placeholder="Enter Your email">
         <br><br>
-        <input type="radio" value="Male" class="gender" id="male">
+        <input type="radio" value="Male" class="gender" id="Male">
         <label for="male">Male</label>
-        <input type="radio" value="Female" class="gender" id="female">
+        <input type="radio" value="Female" class="gender" id="Female">
         <label for="female">Female</label>
-        <input type="radio" value="none" class="gender" id="none">
+        <input type="radio" value="none" class="gender" id="None">
         <label for="none">None</label>
         <br><br>
         <select name="" id="location">
@@ -66,15 +66,13 @@
 
     let a= ()=>{
         console.log("hello")
-            let a = document.querySelectorAll(".class")
+            let a = document.querySelectorAll(".gender")
             for(let i of a){
-                if(a.checked == true){
-                    console.log("hello")
-                    return a;
+                if(i.checked == true){
+                    return i.id;
                 }
             }
         }
-
     document.querySelector("#submit").onclick= function(){
         let obj = {
             name : document.querySelector("#username").value,
@@ -83,15 +81,8 @@
             email : document.querySelector("#useremail").value,
             gender :a(),
             location : document.querySelector("#location").value,
-
         }
         console.log(obj)
-        // let obj1= document.querySelectorAll("input")
-        // console.log(obj1)
-        // for(i of obj1)
-        // {
-        //     console.log(i)
-        // }
     }
     </script>
 </body>
