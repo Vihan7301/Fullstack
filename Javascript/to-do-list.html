@@ -24,37 +24,66 @@
         input{
             padding: 10px;
             width: 200px;
-            /* height: 30px; */
             border-radius: 20px;
             border: none;
+            margin-right: 10px;
         }
         #submit{
-            display: inline;
+            display: inline !important;
             border-radius: 500px !important;
             padding: 5px !important;
-            width: 32px !important;
+            width: 32px !important ;
             border-color: rgb(5, 215, 7) !important;
-            color: white !important;
+            color: white  !important;
             font-size: 20px !important;
             border: none !important;
         }
         #submit:hover{
             opacity: 0.7;
         }
+        .countainer{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 30px;
+        }
+        div{
+            margin-top: 20px;
+            margin-bottom: solid 2px  white;
+        }
         h1{
+            display: inline;
             text-align: center;
             color: white;
+            font-size: 1.8rem !important;
+            font-family: 'Hind' sans-serif;
+            margin-right: 40px;
         }
-        button{
-            display: flex;
-            justify-content: center;
-            margin: auto;
+        #complete{
+            font-size: 1.4rem;
+            margin: 0 0.75rem;
+            font-family: 'Hind' sans-serif;
+            background: none;
+            outline: none;
+            border: none;
+            color: lime;
+        }
+        #delete{
+            font-size: 1.4rem;
+            margin: 0 0.75rem;
+            font-family: 'Hind' sans-serif;
+            background: none;
+            outline: none;
+            border: none;
+            color: red;
         }
     </style>
 </head>
 <body>
     <center>
-    <div class="heading"><span class="todo">TODO</span><span class="list">list</span></div>
+    <div class="heading"><span class="todo">TODO</span>list</div>
     <input type="text" placeholder="What Do You Want To Do ...">
     <button id="submit">+</button>
     <div class="countainer"></div>
@@ -63,13 +92,13 @@
     <script>
         let inp = document.querySelector("input")
         let main = document.getElementById("submit")
-       
         let head = document.querySelectorAll("h1")
+        let countainer = document.querySelector(".countainer")
         let count = 0
         let btn;
         
         main.onclick =function(){
-            
+            let div = document.createElement("div")
             let heading = document.createElement("h1")
             let done = document.createElement("button")
             let delete_btn = document.createElement("button")
@@ -78,13 +107,18 @@
             delete_btn.innerText = "Delete"
             count++
 
+            div.className = count
             heading.className = count
             done.className = count
             delete_btn.className = count
             heading.innerHTML=inp.value
-            document.body.append(heading)
-            document.body.append(done)
-            document.body.append(delete_btn)
+            done.id="complete"
+            delete_btn.id = "delete"
+
+            countainer.appendChild(div)
+            div.appendChild(heading)
+            div.appendChild(done)
+            div.appendChild(delete_btn)
             
             inp.value=''
             inp.focus()
