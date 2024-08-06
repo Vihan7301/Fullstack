@@ -31,20 +31,12 @@ app.use(express.json());
 app.use(express.static(path.resolve(__dirname,"./Public")));
 //static files wala middleware h ye
 
-// "/" is  
-app.get("/userdata", (req, res) => {
-    res.send(userdata);
-});
-
 
 app.get("/", (req, res) => {
   res.sendFile(path.resolve(__dirname,"./Public","index.html"));
 });
 //it sendes files to the server from the public folder
 
-app.get("/contact", (req, res) => {
-  res.sendFile(path.resolve(__dirname,"./Public","contact.html"));
-});
   
 app.listen(PORT, () =>{
   console.log(`Server is running on port ${PORT}`.yellow)
