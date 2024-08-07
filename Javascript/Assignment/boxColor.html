@@ -32,13 +32,6 @@
             align-items: center;
             flex-wrap: wrap;
         }
-        .box{
-            height: 100px;
-            width: 100px;
-            margin: 15px;
-            box-shadow: 6px -6px 8px #9d9d9d, -6px 6px 8px #ffffff;
-            border-radius: 30px;
-        }
         input{
             font-size: 20px;
             padding: 10px;
@@ -55,23 +48,31 @@
             border-radius: 10px;
             border: none;
         }
+        .box{
+            height: 100px;
+            width: 100px;
+            margin: 15px;
+            box-shadow: 6px -6px 8px #9d9d9d, -6px 6px 8px #ffffff;
+            border-radius: 30px;
+            font-size: 30px;
+        }
     </style>
 </head>
 <body>
     <center>
     <div class="bigBox">
         <input type="text" placeholder="Enter Your Color Name" id="color">
-        <input type="number" placeholder="Select Your div" id="number">
+        <input type="number" placeholder="Select Your Box No." id="number">
         <button>Submit</button>
         <div class="boxess">
-            <div class="box" id="1"></div>
-            <div class="box" id="2"></div>
-            <div class="box" id="3"></div>
-            <div class="box" id="4"></div>
-            <div class="box" id="5"></div>
-            <div class="box" id="6"></div>
-            <div class="box" id="7"></div>
-            <div class="box" id="8"></div>
+            <div class="box" id="1">1</div>
+            <div class="box" id="2">2</div>
+            <div class="box" id="3">3</div>
+            <div class="box" id="4">4</div>
+            <div class="box" id="5">5</div>
+            <div class="box" id="6">6</div>
+            <div class="box" id="7">7</div>
+            <div class="box" id="8">8</div>
         </div>
     </div>
 </center>
@@ -89,6 +90,7 @@
             for (let i of all_div){
                 if (i.id == d){
                     i.style.backgroundColor = c
+                    i.innerText=""
                 }
             }
         }
