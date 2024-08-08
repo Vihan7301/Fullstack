@@ -11,41 +11,74 @@
         }
         .countainer{
             display: flex;
-
+            justify-content: space-around;
+            /* justify-content: space-between; */
         }
         .input{
-            width: 50%;
+            padding: 10px;
+            width: 45%;
             border: 2px solid black;
         }
+        label{
+            font-size: 30px;
+            margin-left: 30px;
+        }
+        input{
+            height: 30px;
+            width: 300px;
+            margin-left: 50px;
+            font-size: 20px;
+        }
         .output{
-            width: 50%;
+            width: 45%;
             border: 2px solid black;
+            display: flex;
+            
+        }
+        .image_display{
+            width: 200px;
+            height: 200px;
+        }
+        .display{
+            width: 50%;
         }
     </style>
 </head>
 <body>
     <div class="countainer">
         <div class="input">
-                <form action="">
-                    <label for="image">Image :</label>
-                    <input type="text" id="image">
-                    <br>
-                    <label for="name">Name :</label>
-                    <input type="text" name="" id="name">
-                    <br>
-                    <label for="email">Email :</label>
-                    <input type="email" name="" id="email">
-                    <br>
-                    <label for="coarse">Coarse :</label>
-                    <input type="text" name="" id="coarse">
-                    <br>
-                    <label for="mobile">Mobile :</label>
-                    <input type="number" name="" id="mobile">
-                </form>
+            <form action="">
+                <label for="image">Image :</label><br>
+                <input type="text" id="image">
+                <br><br>
+                <label for="name">Name :</label><br>
+                <input type="text" name="" id="name">
+                <br><br>
+                <label for="email">Email :</label><br>
+                <input type="email" name="" id="email">
+                <br><br>
+                <label for="coarse">Coarse :</label><br>
+                <input type="text" name="" id="coarse">
+                <br><br>
+                <label for="mobile">Mobile :</label><br>
+                <input type="number" name="" id="mobile">
+            </form>
+        </div>
+        <div class="output">
+            <div class="image_display">
+                <img src="" alt="">
             </div>
-            <div class="output">
-                
+            <div class="display">
+
             </div>
         </div>
+    </div>
+    <script>
+        let image = document.getElementById("image")
+        setInterval(()=>{
+            let img = document.querySelector("img")
+            img = image.value
+        },10)
+    </script>
 </body>
 </html>
