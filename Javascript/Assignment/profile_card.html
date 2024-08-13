@@ -48,20 +48,20 @@
     <div class="countainer">
         <div class="input">
             <form action="">
-                <label for="image">Image :</label><br>
-                <input type="text" id="image">
+                <label for="image_input">Image :</label><br>
+                <input type="text" id="image_input">
                 <br><br>
-                <label for="name">Name :</label><br>
-                <input type="text" name="" id="name">
+                <label for="name_input">Name :</label><br>
+                <input type="text" name="" id="name_input">
                 <br><br>
-                <label for="email">Email :</label><br>
-                <input type="email" name="" id="email">
+                <label for="email_input">Email :</label><br>
+                <input type="email" name="" id="email_input">
                 <br><br>
-                <label for="coarse">Coarse :</label><br>
-                <input type="text" name="" id="coarse">
+                <label for="coarse_input">Coarse :</label><br>
+                <input type="text" name="" id="coarse_input">
                 <br><br>
-                <label for="mobile">Mobile :</label><br>
-                <input type="number" name="" id="mobile">
+                <label for="mobile_input">Mobile :</label><br>
+                <input type="number" name="" id="mobile_input">
             </form>
         </div>
         <div class="output">
@@ -69,15 +69,23 @@
                 <img src="" alt="">
             </div>
             <div class="display">
-                <div class="text"></div>
+                <div class="name_output"></div>
+                <div class="email_output"></div>
+                <div class="coarse_output"></div>
+                <div class="mobile_output"></div>
             </div>
         </div>
     </div>
     <script>
-        let image = document.getElementById("image")
+        let image = document.getElementById("image_input")
+        let name = document.getElementsByClassName("name_output")
+        let email = document.getElementsByClassName("email_output")
+        let coarse = document.getElementsByClassName("coarse_output")
+        let mobile = document.getElementsByClassName("mobile_output")
         setInterval(()=>{
             let img = document.querySelector("img")
             img.src = image.value
+            name.innertext = document.getElementById("")
         },10)
     </script>
 </body>
