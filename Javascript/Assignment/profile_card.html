@@ -69,7 +69,7 @@
                 <img src="" alt="">
             </div>
             <div class="display">
-                <div class="name_output"></div>
+                <div id="name_output"></div>
                 <div class="email_output"></div>
                 <div class="coarse_output"></div>
                 <div class="mobile_output"></div>
@@ -78,14 +78,14 @@
     </div>
     <script>
         let image = document.getElementById("image_input")
-        let name = document.getElementsByClassName("name_output")
+        let name = document.getElementsById("name_output")
         let email = document.getElementsByClassName("email_output")
         let coarse = document.getElementsByClassName("coarse_output")
         let mobile = document.getElementsByClassName("mobile_output")
         setInterval(()=>{
             let img = document.querySelector("img")
             img.src = image.value
-            name.innertext = document.getElementById("")
+            name = document.getElementById("name_input")
         },10)
     </script>
 </body>
