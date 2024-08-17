@@ -33,14 +33,18 @@
             width: 45%;
             border: 2px solid black;
             display: flex;
-            
+            align-items: center;
+            justify-content: center;
         }
         .image_display{
             width: 200px;
             height: 200px;
         }
+        .heading{
+            font-size: 30px;
+        }
         .display{
-            width: 50%;
+            /* width: 50%; */
         }
     </style>
 </head>
@@ -69,10 +73,17 @@
                 <img src="" alt="Image Preview" id="image_output">
             </div>
             <div class="display">
-                <div id="name_output"></div>
-                <div id="email_output"></div>
-                <div id="coarse_output"></div>
-                <div id="mobile_output"></div>
+                <span class="heading">Name :</span>
+                <span id="name_output">Vuihan</span>
+                <br>
+                <span class="heading">Email :</span>
+                <span id="email_output">sxa</span>
+                <br>
+                <span class="heading">Coarse :</span>
+                <span id="coarse_output">asxas</span>
+                <br>
+                <span class="heading">Mobile Number :</span>
+                <span id="mobile_output">saasx</span>
             </div>
         </div>
     </div>
@@ -90,17 +101,17 @@
         let coarseOutput = document.getElementById("coarse_output");
         let mobileOutput = document.getElementById("mobile_output");
     
-        setInterval(() => {
-            imgOutput.src = imageInput.value;
-            nameOutput.textContent = nameInput.value;
-            emailOutput.textContent = emailInput.value;
-            coarseOutput.textContent = coarseInput.value;
-            mobileOutput.textContent = mobileInput.value;
-        }, 10);
+        // setInterval(() => {
+        //     imgOutput.src = imageInput.value;
+        //     nameOutput.innerText = nameInput.value;
+        //     emailOutput.innerText = emailInput.value;
+        //     coarseOutput.innerText = coarseInput.value;
+        //     mobileOutput.innerText = mobileInput.value;
+        // }, 10);
     </script>
     
 
-    
+
     <!-- <div class="countainer">
         <div class="input">
             <form action="">
