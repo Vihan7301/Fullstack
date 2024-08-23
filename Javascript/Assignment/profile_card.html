@@ -81,16 +81,16 @@
             </div>
             <div class="display">
                 <span class="heading">Name :</span>
-                <span class="text" id="name_output">Vuihan</span>
+                <span class="text" id="name_output"></span>
                 <br>
                 <span class="heading">Email :</span>
-                <span class="text" id="email_output">sxa</span>
+                <span class="text" id="email_output"></span>
                 <br>
                 <span class="heading">Coarse :</span>
-                <span class="text" id="coarse_output">asxas</span>
+                <span class="text" id="coarse_output"></span>
                 <br>
                 <span class="heading">Mobile Number :</span>
-                <span class="text" id="mobile_output">saasx</span>
+                <span class="text" id="mobile_output"></span>
             </div>
         </div>
     </div>
@@ -107,8 +107,9 @@
         let emailOutput = document.getElementById("email_output");
         let coarseOutput = document.getElementById("coarse_output");
         let mobileOutput = document.getElementById("mobile_output");
-    
+        
         setInterval(() => {
+            
             imgOutput.src = imageInput.value;
             nameOutput.innerText = nameInput.value;
             emailOutput.innerText = emailInput.value;
@@ -117,50 +118,5 @@
         }, 10);
     </script>
     
-
-
-    <!-- <div class="countainer">
-        <div class="input">
-            <form action="">
-                <label for="image_input">Image :</label><br>
-                <input type="text" id="image_input">
-                <br><br>
-                <label for="name_input">Name :</label><br>
-                <input type="text" name="" id="name_input">
-                <br><br>
-                <label for="email_input">Email :</label><br>
-                <input type="email" name="" id="email_input">
-                <br><br>
-                <label for="coarse_input">Coarse :</label><br>
-                <input type="text" name="" id="coarse_input">
-                <br><br>
-                <label for="mobile_input">Mobile :</label><br>
-                <input type="number" name="" id="mobile_input">
-            </form>
-        </div>
-        <div class="output">
-            <div class="image_display">
-                <img src="" alt="">
-            </div>
-            <div class="display">
-                <div id="name_output"></div>
-                <div class="email_output"></div>
-                <div class="coarse_output"></div>
-                <div class="mobile_output"></div>
-            </div>
-        </div>
-    </div>
-    <script>
-        let image = document.getElementById("image_input")
-        let name = document.getElementsById("name_output")
-        let email = document.getElementsByClassName("email_output")
-        let coarse = document.getElementsByClassName("coarse_output")
-        let mobile = document.getElementsByClassName("mobile_output")
-        setInterval(()=>{
-            let img = document.querySelector("img")
-            img.src = image
-            name = document.getElementById("name_input").value
-        },10)
-    </script> -->
 </body>
 </html>

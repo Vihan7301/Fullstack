@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Analog Clock</title>
 </head>
 <style>
-    *{
+    * {
         padding: 0;
         margin: 0;
     }
-    body{
+
+    body {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
     }
-    .ana{
+
+    .heading {
+        font-size: 80px;
+        font-weight: bold;
+    }
+
+    .clock {
+        margin-top: 50px;
         background-color: black;
         color: white;
         width: 500px;
@@ -27,8 +37,10 @@
         justify-content: center;
     }
 </style>
+
 <body>
-    <div class="ana">
+    <div class="heading">Digital Clock</div>
+    <div class="clock">
         <span id="hr">00</span>
         <span>:</span>
         <span id="min">00</span>
@@ -36,12 +48,25 @@
         <span id="sec">00</span>
     </div>
     <script>
-        setInterval(()=>{
+        setInterval(() => {
             let a = new Date()
-            document.getElementById("hr").innerText=a.getHours()
-            document.getElementById("min").innerText=a.getMinutes()
-            document.getElementById("sec").innerText=a.getSeconds()
-        },1000)
+            let hour = a.getHours()
+            let min = a.getMinutes()
+            let sec = a.getSeconds()
+            if (hour < 10) {
+                hour = "0" + hour
+            }
+            if (min < 10) {
+                min = "0" + min
+            }
+            if (sec < 10) {
+                sec = "0" + sec
+            }
+            document.getElementById("hr").innerText = hour
+            document.getElementById("min").innerText = min
+            document.getElementById("sec").innerText = sec
+        }, 1000)
     </script>
 </body>
+
 </html>
