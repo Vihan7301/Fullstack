@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+   
+    
+</head>
+<body>
+<!--    
+    <div class="box">
+        <form action = ""  >
+            
+                <label for="personNameId" >Name :-</label>
+                <input type="text" value = "dhruv" placeholder="Enter your name" id="personNameId">
+            
+
+            <br>
+                
+                <label for="ageId" >Age :-</label>
+                <input type="number" value="26" name="Age" id="ageId">
+                <br>
+            
+                <label for="emailId">Email :-</label>
+                <input type="email" value="gargdhruv74@gmail.com" name="" id="emailId" >
+                
+                <br>
+
+                <label for="phoneNoId">Phone No. :-</label>
+                <input type="number" value="9462948848" id="phoneNoId">
+                <br>
+                <label for="genderId">Gender :-</label>
+                <label for="maleId">Male</label>
+                <input type="radio" value="Male" id="maleId">
+                <label for="femaleId">Female</label>
+                <input type="radio" value="Female" id="femaleId">
+
+                <br>
+                <label for="homeTownId">Select your home Town :-</label>
+                <select  id="homeTownId">
+                    <option value="Dehli">Dehli</option>
+                    <option value="Jaipur">Jaipur</option>
+                    <option value="Banglore">Banglore</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Hydrabad">Hydrabad</option>
+                    <option value="Noida">Noida</option>
+                    <option value="jodhpur">Jodhpur</option>
+                </select>
+
+                <br>
+                <button class="button">Submit</button>                
+            
+
+
+        </form>
+    </div>
+
+
+    <script >
+        let obj1 = {
+    name: document.querySelector("#personNameId").value,
+    age: document.querySelector("#ageId").value,
+    email: document.querySelector("#emailId").value,
+    phoneNo: document.querySelector("#phoneNoId").value,
+    //age: document.querySelector("#genderId").value,
+    city: document.querySelector("#homeTownId").value,
+    
+}
+
+let arr1 = [];
+let idx = 0;
+
+document.querySelector(".button").onclick = function()
+{
+    for(i in obj1)
+        {
+          arr1[idx] = i.value;
+          console.log(i);
+            idx++;
+        }
+        console.log(arr1);
+ 
+}
+    </script> -->
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <form action="" onsubmit="return false;">
+            <label for="personNameId">Name:</label>
+            <input type="text" value="dhruv" placeholder="Enter your name" id="personNameId">
+            <br>
+            
+            <label for="ageId">Age:</label>
+            <input type="number" value="26" id="ageId">
+            <br>
+            
+            <label for="emailId">Email:</label>
+            <input type="email" value="gargdhruv74@gmail.com" id="emailId">
+            <br>
+            
+            <label for="phoneNoId">Phone No.:</label>
+            <input type="tel" value="9462948848" id="phoneNoId">
+            <br>
+            
+            <label for="maleId">Male</label>
+            <input type="radio" name="gender" value="Male" id="maleId">
+            <label for="femaleId">Female</label>
+            <input type="radio" name="gender" value="Female" id="femaleId">
+            <br>
+            
+            <label for="homeTownId">Select your home Town:</label>
+            <select id="homeTownId">
+                <option value="Delhi">Delhi</option>
+                <option value="Jaipur">Jaipur</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Noida">Noida</option>
+                <option value="Jodhpur">Jodhpur</option>
+            </select>
+            <br>
+            <button type="submit" class="button">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        let obj1 = {
+            name: document.querySelector("#personNameId").value,
+            age: document.querySelector("#ageId").value,
+            email: document.querySelector("#emailId").value,
+            phoneNo: document.querySelector("#phoneNoId").value,
+            // gender: document.querySelector('input[name="gender"]:checked') ? document.querySelector('input[name="gender"]:checked').value : null,
+            city: document.querySelector("#homeTownId").value,
+        };
+        document.querySelector(".button").onclick = function() {
+
+            let arr1=[]
+            idx=0
+            for(i in obj1)
+        {
+          arr1[idx] = i.value;
+          console.log(i);
+            idx++;
+        }
+            
+            console.log(arr1);
+        };
+    </script>
+</body>
+</html>
+
+   
+</body>
+</html>

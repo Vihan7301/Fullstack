@@ -51,15 +51,15 @@
         <br><br>
         <input type="button" value="Submit" id="submit">
     </form>
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Number</th>
-            <th>Email</th>
-            <th>Gender</th>
-            <th>City</th>
-            <th>Edit</th>
+    <table class="table">
+        <tr class="0">
+            <th class="0">Name</th>
+            <th class="0">Age</th>
+            <th class="0">Number</th>
+            <th class="0">Email</th>
+            <th class="0">Gender</th>
+            <th class="0">City</th>
+            <th class="0">Edit</th>
         </tr>
     </table>
     <script> 
@@ -73,6 +73,7 @@
                 }
             }
         }
+        let count = 1;
     document.querySelector("#submit").onclick= function(){
         let obj = {
             name : document.querySelector("#username").value,
@@ -82,7 +83,58 @@
             gender :a(),
             location : document.querySelector("#location").value,
         }
-        console.log(obj)
+        console.log(obj);
+
+        
+        let tr = document.createElement("tr")
+        tr.className = count
+        let td1 = document.createElement("td")
+        td1.className = count
+        td1.innerText= document.querySelector("#username").value
+
+        let td2 = document.createElement("td")
+        td2.className = count
+        td2.innerText = document.querySelector("#age").value
+
+        let td3 = document.createElement("td")
+        td3.className = count
+        td3.innerText=document.querySelector("#phone").value
+
+        let td4 = document.createElement("td")
+        td4.className = count
+        td4.innerText = document.querySelector("#useremail").value
+
+        let td5 = document.createElement("td")
+        td5.className = count
+        td5.innerText = a()
+
+        let td6 = document.createElement("td")
+        td6.className = count
+        td6.innerText = document.querySelector("#location").value
+
+        let td7 = document.createElement("td")
+        td7.className = count
+        let button1= document.createElement("button")
+        button1.innerText = "Edit"
+        let button2 = document.createElement("button")
+        button2.innerText = "Delete"
+        td7.innerHTML = function(){
+            button1;
+            button2
+        }
+
+        document.body.querySelector("table").append(tr)
+        document.body.querySelector("table").append(td1)
+        document.body.querySelector("table").append(td2)
+        document.body.querySelector("table").append(td3)
+        document.body.querySelector("table").append(td4)
+        document.body.querySelector("table").append(td5)
+        document.body.querySelector("table").append(td6)
+        document.body.querySelector("table").append(td7)
+
+
+        count++;
+
         
     }
     </script>
