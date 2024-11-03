@@ -14,29 +14,30 @@
         table{
             margin-top: 50px;
         }
-        th{
+        th,td{
             padding: 10px;
         }
         table, th, td {
-            border:1px solid black;
+            border: 1px solid black;
+
         }
     </style>
 </head>
 <body>
     <form method="post">
-        <input type="text" id="username" placeholder="Enter Your Name">
+        <input type="text" id="username" placeholder="Enter Your Name" value="Vihan">
         <br><br>
-        <input type="number" id="age" placeholder="Enter Your Age">
+        <input type="number" id="age" placeholder="Enter Your Age" value="20">
         <br><br>
-        <input type="number" id="phone" placeholder="Enter Your Phone No.">
+        <input type="number" id="phone" placeholder="Enter Your Phone No." value="9530110996">
         <br><br>
-        <input type="email" id="useremail" placeholder="Enter Your email">
+        <input type="email" id="useremail" placeholder="Enter Your email" value="vihangupta7301@gmail.com">
         <br><br>
-        <input type="radio" value="Male" class="gender" id="Male">
+        <input type="radio" value="Male" class="gender" id="Male" name="gender">
         <label for="male">Male</label>
-        <input type="radio" value="Female" class="gender" id="Female">
+        <input type="radio" value="Female" class="gender" id="Female" name="gender">
         <label for="female">Female</label>
-        <input type="radio" value="none" class="gender" id="None">
+        <input type="radio" value="none" class="gender" id="None" name="gender">
         <label for="none">None</label>
         <br><br>
         <select name="" id="location">
@@ -65,7 +66,6 @@
     <script> 
 
     let a= ()=>{
-        console.log("hello")
             let a = document.querySelectorAll(".gender")
             for(let i of a){
                 if(i.checked == true){
@@ -73,69 +73,84 @@
                 }
             }
         }
+
         let count = 1;
     document.querySelector("#submit").onclick= function(){
-        let obj = {
-            name : document.querySelector("#username").value,
-            age : document.querySelector("#age").value,
-            number : document.querySelector("#phone").value,
-            email : document.querySelector("#useremail").value,
-            gender :a(),
-            location : document.querySelector("#location").value,
-        }
-        console.log(obj);
+    //     let obj = {
+    //         name : document.querySelector("#username").value,
+    //         age : document.querySelector("#age").value,
+    //         number : document.querySelector("#phone").value,
+    //         email : document.querySelector("#useremail").value,
+    //         gender :a(),
+    //         location : document.querySelector("#location").value,
+    //     }
+        // console.log(obj);
 
-        
         let tr = document.createElement("tr")
         tr.className = count
+
         let td1 = document.createElement("td")
-        td1.className = count
         td1.innerText= document.querySelector("#username").value
 
         let td2 = document.createElement("td")
-        td2.className = count
         td2.innerText = document.querySelector("#age").value
 
         let td3 = document.createElement("td")
-        td3.className = count
         td3.innerText=document.querySelector("#phone").value
 
         let td4 = document.createElement("td")
-        td4.className = count
         td4.innerText = document.querySelector("#useremail").value
 
         let td5 = document.createElement("td")
-        td5.className = count
         td5.innerText = a()
 
         let td6 = document.createElement("td")
-        td6.className = count
         td6.innerText = document.querySelector("#location").value
 
         let td7 = document.createElement("td")
-        td7.className = count
-        let button1= document.createElement("button")
-        button1.innerText = "Edit"
-        let button2 = document.createElement("button")
-        button2.innerText = "Delete"
-        td7.innerHTML = function(){
-            button1;
-            button2
-        }
+        let edit= document.createElement("button")
+        edit.innerText = "Edit"
+        edit.className = count
+        edit.setAttribute("id", "edit")
+        let del = document.createElement("button")
+        del.innerText = "Delete"
+        del.className = count
+        del.setAttribute("id", "del")
+        td7.append(edit)
+        td7.append(del)
+        
+        tr.append(td1)
+        tr.append(td2)
+        tr.append(td3)
+        tr.append(td4)
+        tr.append(td5)
+        tr.append(td6)
+        tr.append(td7)
 
         document.body.querySelector("table").append(tr)
-        document.body.querySelector("table").append(td1)
-        document.body.querySelector("table").append(td2)
-        document.body.querySelector("table").append(td3)
-        document.body.querySelector("table").append(td4)
-        document.body.querySelector("table").append(td5)
-        document.body.querySelector("table").append(td6)
-        document.body.querySelector("table").append(td7)
-
-
         count++;
 
+        edit.onclick = function(event){ 
+                let a =  document.getElementsByClassName(event.target.className);
+                let info = a[0].querySelectorAll("td")
+                document.querySelector("#username").value = info[0].innerText
+                document.querySelector("#age").value = info[1].innerText
+                document.querySelector("#phone").value = info[2].innerText
+                document.querySelector("#useremail").value = info[3].innerText
+                // document.querySelector("#gender").value = info[4].innerText
+                document.querySelector("#location").value = info[5].innerText
+
+                for(let c of a){
+                    c.remove()
+                }
+            }
         
+        del.onclick =function(event){
+            let a =  document.getElementsByClassName(event.target.className);
+            for(let c of a){
+                    c.remove()
+                }
+        }
     }
     </script>
 </body>
