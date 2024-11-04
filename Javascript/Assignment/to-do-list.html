@@ -129,7 +129,8 @@
 
             done.onclick = function(event){
                 let a =  document.getElementsByClassName(event.target.className);
-                a[0].style.textDecoration = 'line-through'
+                a[0].style.textDecoration = 'line-through';
+                a[0].style.textDecorationThickness = "0.4rem"; 
             }
 
             delete_btn.onclick = function(event){

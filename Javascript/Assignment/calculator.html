@@ -104,9 +104,14 @@
         {
             i.onclick= function()
             {
-                if (i.innerText == "="){
-                    let val = b.value
-                    b.value = eval(val)
+                if (i.innerText === "="){
+                    try{
+                        let val = b.value
+                        b.value = eval(val)  
+                    }
+                    catch{
+                        b.value = 'error'
+                    }
                 }
                 else if(i.innerText == "CLR"){
                     b.value=" "
