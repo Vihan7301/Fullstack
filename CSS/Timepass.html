@@ -14,8 +14,8 @@
 
       .parent{
 
-        /* background:linear-gradient(45deg,rgb(241, 79, 79),rgb(242, 159, 4),rgb(237, 237, 55),rgb(7, 0, 0)); */
-        background:linear-gradient(60deg, rgb(161, 1, 0),rgb(218, 31, 5),rgb(243, 60, 4),rgb(254, 101, 13),rgb(255, 193, 31),rgb (255, 247, 93));
+        background:linear-gradient(45deg,rgb(241, 79, 79),rgb(242, 159, 4),rgb(237, 237, 55),rgb(7, 0, 0));
+        /* background:linear-gradient(60deg, rgb(161, 1, 0),rgb(218, 31, 5),rgb(243, 60, 4),rgb(254, 101, 13),rgb(255, 193, 31),rgb (255, 247, 93)); */
         height: 90vh;
         width: 50%;
         display: flex;
@@ -25,10 +25,11 @@
         border-radius: 500px;
         animation-name: box;
         animation-duration: 400ms;
-        /* animation-direction: alternate; */
+        animation-direction: alternate;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
       }
+
       @keyframes box {
 
         from{
@@ -39,6 +40,7 @@
             transform: rotate(360deg);
         }
       }
+
       .container {
         height: 300px;
         width: 300px;
@@ -46,26 +48,31 @@
         margin: 5px;
         position: absolute;
       }
+
       .container:nth-child(1) {
         border-radius: 400px 0px 400px 0px;
         top: 70px;
         transform: rotate(-45deg);
       }
+
       .container:nth-child(2) {
         border-radius: 400px 0px 400px 0px;
         left: 90px;
         transform: rotate(45deg);
       }
+
       .container:nth-child(3) {
         border-radius: 400px 0px 400px 0px;
         right: 90px;
         transform: rotate(45deg);
       }
+
       .container:nth-child(4) {
         border-radius: 400px 0px 400px 0px;
         bottom: 70px;
         transform: rotate(-45deg);
       }
+      
     </style>
   </head>
   <body>
