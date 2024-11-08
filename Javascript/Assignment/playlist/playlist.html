@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playlist</title>
     <style>
-        body{
+        body {
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        .box{
+
+        .box {
             border: 1px black;
             width: 50%;
             background-color: black;
@@ -18,16 +20,18 @@
             flex-direction: column;
             padding: 20px;
         }
-        .box button{
+
+        .box button {
             padding: 10px;
             margin: 10px;
             font-size: 30px;
         }
     </style>
 </head>
+
 <body>
     <div class="box">
-        <audio  src="" controls></audio>
+        <audio src="" controls></audio>
         <br><br>
         <button class="x" id="1">audio1</button>
         <button class="x" id="2">audio2</button>
@@ -40,47 +44,48 @@
     </div>
     <script>
         let a = document.querySelectorAll("button")
-        let b= document.querySelector("audio")
-        
-        function PlayMusic(id){
-            b.src= `audio${id}.mp3`
-            b.id= id
+        let b = document.querySelector("audio")
+
+        function PlayMusic(id) {
+            b.src = `audio${id}.mp3`
+            b.id = id
             b.play()
         }
-        for( let i of a){
-            i.onclick = function(){
-                if(i.id == "pre"){
-                    let get_id  =Number(b.id)
-                    --get_id 
-                    if (get_id == 0){
+        for (let i of a) {
+            i.onclick = function () {
+                if (i.id == "pre") {
+                    let get_id = Number(b.id)
+                    --get_id
+                    if (get_id == 0) {
                         get_id = document.querySelectorAll(".x").length;
-                        console.log(get_id,"length")
+                        console.log(get_id, "length")
                     }
                     PlayMusic(get_id)
                 }
-                else if (i.id == "next"){
-                    let get_id  =Number(b.id)
+                else if (i.id == "next") {
+                    let get_id = Number(b.id)
                     ++get_id
-                    if(get_id == (document.querySelectorAll(".x").length +1)){
-                        get_id =1
+                    if (get_id == (document.querySelectorAll(".x").length + 1)) {
+                        get_id = 1
                     }
                     PlayMusic(get_id)
                 }
-                else if (i.id == "ran"){
-                    let ran_id = math.floor(math.random()*4)
+                else if (i.id == "ran") {
+                    let ran_id = math.floor(math.random() * 4)
                     let get_id = number(b.id)
                     get_id = ran_id
                     PlayMusic(get_id)
                 }
-                else{
+                else {
                     var id = i.id
                     PlayMusic(id)
                 }
             }
         }
 
-        
+
 
     </script>
 </body>
+
 </html>
