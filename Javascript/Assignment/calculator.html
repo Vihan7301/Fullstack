@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <style>
-        *{
+        * {
             padding: 0;
             margin: 0;
         }
-        body{
+
+        body {
             display: flex;
             flex-direction: column;
             align-items: center;
             background-color: antiquewhite;
         }
-        .cal{
+
+        .cal {
             font-size: 65px;
             font-weight: bold;
         }
-        .calculator{
+
+        .calculator {
             background-color: #374354 !important;
             width: 500px;
             display: flex;
@@ -28,12 +32,14 @@
             margin-top: 50px;
             border-radius: 20px;
         }
-        .display{
+
+        .display {
             width: 90%;
             height: 80px;
             margin-top: 30px;
         }
-        .display input{
+
+        .display input {
             border: none;
             border-radius: 10px;
             width: 100%;
@@ -42,7 +48,8 @@
             background-color: #434b56;
             color: white;
         }
-        .keys{
+
+        .keys {
             display: flex;
             width: 90%;
             display: flex;
@@ -53,7 +60,8 @@
             margin-bottom: 50px;
             background-color: #374354;
         }
-        .keys button{
+
+        .keys button {
             width: 20%;
             height: 50px;
             margin: 10px;
@@ -62,14 +70,16 @@
             font-size: 20px;
             background-color: #374354;
             border: 1px solid black;
-            box-shadow: -5px -5px 10px white, 3px 3px 10px black ;
+            box-shadow: -5px -5px 10px white, 3px 3px 10px black;
             color: white;
         }
-        .blue{
+
+        .blue {
             color: rgb(114, 246, 182) !important;
         }
     </style>
 </head>
+
 <body>
     <div class="cal">Calculator</div>
     <div class="calculator">
@@ -98,39 +108,37 @@
         </div>
     </div>
     <script>
-        let a =document.querySelectorAll("button");
+        let a = document.querySelectorAll("button");
         let b = document.querySelector("input");
-        for( let i of a)
-        {
-            i.onclick= function()
-            {
-                
-                if (i.innerText === "="){
-                    try{
+        for (let i of a) {
+            i.onclick = function () {
+
+                if (i.innerText === "=") {
+                    try {
 
                         let val = b.value
-                        b.value = eval(val)  
+                        b.value = eval(val)
                     }
-                    catch{
-                        alert ("the Input is not valid")
+                    catch {
+                        alert("the Input is not valid")
                         b.value = ""
                     }
                 }
-                else if(i.innerText == "CLR"){
-                    b.value=""
+                else if (i.innerText == "CLR") {
+                    b.value = ""
                 }
-                else if(i.innerText == "DEL"){
-                    b.value=b.value.slice(0,-1)
+                else if (i.innerText == "DEL") {
+                    b.value = b.value.slice(0, -1)
                 }
-                else
-                {
+                else {
                     let info = b.value
                     if (i.innerText === "." && info.includes(".")) return;
-                    b.value +=i.innerText
+                    b.value += i.innerText
                 }
-                
+
             }
         }
     </script>
 </body>
+
 </html>

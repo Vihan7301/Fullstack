@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
     <style>
-        input{
+        input {
             padding: 10px;
         }
-        #submit{
+
+        #submit {
             background-color: red;
         }
-        table{
+
+        table {
             margin-top: 50px;
         }
-        th,td{
+
+        th,
+        td {
             padding: 10px;
         }
-        table, th, td {
+
+        table,
+        th,
+        td {
             border: 1px solid black;
 
         }
     </style>
 </head>
+
 <body>
     <form method="post">
         <input type="text" id="username" placeholder="Enter Your Name" value="Vihan">
@@ -63,75 +72,75 @@
             <th class="0">Edit</th>
         </tr>
     </table>
-    <script> 
+    <script>
 
-    let a= ()=>{
+        let a = () => {
             let a = document.querySelectorAll(".gender")
-            for(let i of a){
-                if(i.checked == true){
+            for (let i of a) {
+                if (i.checked == true) {
                     return i.id;
                 }
             }
         }
 
         let count = 1;
-    document.querySelector("#submit").onclick= function(){
-    //     let obj = {
-    //         name : document.querySelector("#username").value,
-    //         age : document.querySelector("#age").value,
-    //         number : document.querySelector("#phone").value,
-    //         email : document.querySelector("#useremail").value,
-    //         gender :a(),
-    //         location : document.querySelector("#location").value,
-    //     }
-        // console.log(obj);
+        document.querySelector("#submit").onclick = function () {
+            //     let obj = {
+            //         name : document.querySelector("#username").value,
+            //         age : document.querySelector("#age").value,
+            //         number : document.querySelector("#phone").value,
+            //         email : document.querySelector("#useremail").value,
+            //         gender :a(),
+            //         location : document.querySelector("#location").value,
+            //     }
+            // console.log(obj);
 
-        let tr = document.createElement("tr")
-        tr.className = count
+            let tr = document.createElement("tr")
+            tr.className = count
 
-        let td1 = document.createElement("td")
-        td1.innerText= document.querySelector("#username").value
+            let td1 = document.createElement("td")
+            td1.innerText = document.querySelector("#username").value
 
-        let td2 = document.createElement("td")
-        td2.innerText = document.querySelector("#age").value
+            let td2 = document.createElement("td")
+            td2.innerText = document.querySelector("#age").value
 
-        let td3 = document.createElement("td")
-        td3.innerText=document.querySelector("#phone").value
+            let td3 = document.createElement("td")
+            td3.innerText = document.querySelector("#phone").value
 
-        let td4 = document.createElement("td")
-        td4.innerText = document.querySelector("#useremail").value
+            let td4 = document.createElement("td")
+            td4.innerText = document.querySelector("#useremail").value
 
-        let td5 = document.createElement("td")
-        td5.innerText = a()
+            let td5 = document.createElement("td")
+            td5.innerText = a()
 
-        let td6 = document.createElement("td")
-        td6.innerText = document.querySelector("#location").value
+            let td6 = document.createElement("td")
+            td6.innerText = document.querySelector("#location").value
 
-        let td7 = document.createElement("td")
-        let edit= document.createElement("button")
-        edit.innerText = "Edit"
-        edit.className = count
-        edit.setAttribute("id", "edit")
-        let del = document.createElement("button")
-        del.innerText = "Delete"
-        del.className = count
-        del.setAttribute("id", "del")
-        td7.append(edit)
-        td7.append(del)
-        
-        tr.append(td1)
-        tr.append(td2)
-        tr.append(td3)
-        tr.append(td4)
-        tr.append(td5)
-        tr.append(td6)
-        tr.append(td7)
+            let td7 = document.createElement("td")
+            let edit = document.createElement("button")
+            edit.innerText = "Edit"
+            edit.className = count
+            edit.setAttribute("id", "edit")
+            let del = document.createElement("button")
+            del.innerText = "Delete"
+            del.className = count
+            del.setAttribute("id", "del")
+            td7.append(edit)
+            td7.append(del)
 
-        document.body.querySelector("table").append(tr)
-        count++;
+            tr.append(td1)
+            tr.append(td2)
+            tr.append(td3)
+            tr.append(td4)
+            tr.append(td5)
+            tr.append(td6)
+            tr.append(td7)
 
-        edit.onclick = function(event){ 
-                let a =  document.getElementsByClassName(event.target.className);
+            document.body.querySelector("table").append(tr)
+            count++;
+
+            edit.onclick = function (event) {
+                let a = document.getElementsByClassName(event.target.className);
                 let info = a[0].querySelectorAll("td")
                 document.querySelector("#username").value = info[0].innerText
                 document.querySelector("#age").value = info[1].innerText
@@ -140,18 +149,19 @@
                 // document.querySelector("#gender").value = info[4].innerText
                 document.querySelector("#location").value = info[5].innerText
 
-                for(let c of a){
+                for (let c of a) {
                     c.remove()
                 }
             }
-        
-        del.onclick =function(event){
-            let a =  document.getElementsByClassName(event.target.className);
-            for(let c of a){
+
+            del.onclick = function (event) {
+                let a = document.getElementsByClassName(event.target.className);
+                for (let c of a) {
                     c.remove()
                 }
+            }
         }
-    }
     </script>
 </body>
+
 </html>

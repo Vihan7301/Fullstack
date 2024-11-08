@@ -1,72 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stopwatch</title>
     <style>
-       *{
-        padding: 0;
-        margin: 0;
-       } 
-       body{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        background-color: rgb(224, 224, 224);
-       }
-       .Heading{
-        font-size: 100px;
-       }
-       .watch{
-        margin-top: 100px;
-        background-color: rgb(224, 224, 224);
-        height: 500px;
-        width: 500px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        border-radius: 50px;
-        box-shadow: 6px -6px 8px #9d9d9d, -6px 6px 8px #ffffff;
-       }
-       span{
-        padding: 20px 30px;
-        box-shadow: 6px -6px 8px #9d9d9d, -6px 6px 8px #ffffff;
-        border-radius: 30px;
-        font-size: 30px;
-        color: rgb(62, 137, 222);
-        margin: 5px;
-       }
-       .buttons{
-        margin-top: 50px;
-       }
-       .buttons button{
-        border: none;
-        margin: 5px 30px;
-        padding: 20px 40px;
-        font-size: 30px;
-        border-radius: 30px;
-        color: white;
-        background-color: #2e80b3;
-        box-shadow: 6px -6px 8px #9d9d9d,   
-      -6px 6px 8px #ffffff;
-       }
-       .buttons button:nth-of-type(2) {
-    background-color: #ae7617;
-  }
-  .buttons button:last-child {
-      margin-top: 12px;
-    background-color: #17ae38;
-  }
-  .buttons button:hover {
-    background: #333;
-    color: #e0e0e0;
-    border-radius: 38px;
-  }
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: rgb(224, 224, 224);
+        }
+
+        .Heading {
+            font-size: 100px;
+        }
+
+        .watch {
+            margin-top: 100px;
+            background-color: rgb(224, 224, 224);
+            height: 500px;
+            width: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 50px;
+            box-shadow: 6px -6px 8px #9d9d9d, -6px 6px 8px #ffffff;
+        }
+
+        span {
+            padding: 20px 30px;
+            box-shadow: 6px -6px 8px #9d9d9d, -6px 6px 8px #ffffff;
+            border-radius: 30px;
+            font-size: 30px;
+            color: rgb(62, 137, 222);
+            margin: 5px;
+        }
+
+        .buttons {
+            margin-top: 50px;
+        }
+
+        .buttons button {
+            border: none;
+            margin: 5px 30px;
+            padding: 20px 40px;
+            font-size: 30px;
+            border-radius: 30px;
+            color: white;
+            background-color: #2e80b3;
+            box-shadow: 6px -6px 8px #9d9d9d,
+                -6px 6px 8px #ffffff;
+        }
+
+        .buttons button:nth-of-type(2) {
+            background-color: #ae7617;
+        }
+
+        .buttons button:last-child {
+            margin-top: 12px;
+            background-color: #17ae38;
+        }
+
+        .buttons button:hover {
+            background: #333;
+            color: #e0e0e0;
+            border-radius: 38px;
+        }
     </style>
 </head>
+
 <body>
     <div class="Heading">Stopwatch</div>
     <div class="watch">
@@ -78,63 +89,59 @@
         </div>
         <div class="buttons">
             <center><button id="start">Start</button>
-            <button id="stop">Stop</button>
-            <button id="reset">Reset</button></center>
+                <button id="stop">Stop</button>
+                <button id="reset">Reset</button>
+            </center>
         </div>
     </div>
     <script>
-        
-        document.getElementById("start").onclick =function(){
+
+        document.getElementById("start").onclick = function () {
             let h = document.getElementById("hour")
             let m = document.getElementById("min")
             let s = document.getElementById("sec")
             let ms = document.getElementById("millisec")
-            
+
             let mls = Number(ms.innerText)
             let sec = Number(s.innerText)
             let min = Number(m.innerText)
             let hour = Number(h.innerText)
-            
-            let a = setInterval(()=>{
+
+            let a = setInterval(() => {
                 mls++
-                
-                if (mls<10)
-                {
-                    mls="0" + mls
+
+                if (mls < 10) {
+                    mls = "0" + mls
                 }
-                ms.innerText  =mls 
-                if(mls == 60){
+                ms.innerText = mls
+                if (mls == 60) {
                     sec++
-                    mls =0
-                    if (sec<10)
-                    {
-                        sec="0" + sec
+                    mls = 0
+                    if (sec < 10) {
+                        sec = "0" + sec
                     }
-                    s.innerText =sec
+                    s.innerText = sec
                 }
-                if (sec == 60){
-                    min ++
-                    sec =0
-                    if (min<10)
-                    {
-                        min="0" + min
+                if (sec == 60) {
+                    min++
+                    sec = 0
+                    if (min < 10) {
+                        min = "0" + min
                     }
-                    m.innerText =min
+                    m.innerText = min
                 }
-                if (min == 60)
-                {
+                if (min == 60) {
                     hour++
-                    min=0
-                    if (hour<10)
-                    {
-                        hour="0" + hour
+                    min = 0
+                    if (hour < 10) {
+                        hour = "0" + hour
                     }
                     h.innerText = hour
                 }
-                document.getElementById("stop").onclick=function(){
+                document.getElementById("stop").onclick = function () {
                     clearInterval(a)
                 }
-                document.getElementById("reset").onclick=function(){
+                document.getElementById("reset").onclick = function () {
                     // mls= 0
                     // sec= 0
                     // min= 0
@@ -146,9 +153,10 @@
                     h.innerText = "00"
                     clearInterval(a)
                 }
-            },10) 
+            }, 10)
         }
-        
+
     </script>
 </body>
+
 </html>
