@@ -104,25 +104,31 @@
         {
             i.onclick= function()
             {
+                
                 if (i.innerText === "="){
                     try{
+
                         let val = b.value
                         b.value = eval(val)  
                     }
                     catch{
-                        b.value = 'error'
+                        alert ("the Input is not valid")
+                        b.value = ""
                     }
                 }
                 else if(i.innerText == "CLR"){
-                    b.value=" "
+                    b.value=""
                 }
                 else if(i.innerText == "DEL"){
                     b.value=b.value.slice(0,-1)
                 }
                 else
                 {
+                    let info = b.value
+                    if (i.innerText === "." && info.includes(".")) return;
                     b.value +=i.innerText
                 }
+                
             }
         }
     </script>
